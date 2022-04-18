@@ -1,10 +1,10 @@
 import React from "react";
-import { Slider, Button } from "@mantine/core";
+import { Slider, Button, MantineProvider } from "@mantine/core";
 
 function Demo() {
   const sliderRef = React.useRef<HTMLInputElement>(null);
   return (
-    <>
+    <MantineProvider>
       <Slider
         ref={sliderRef}
         marks={[
@@ -21,7 +21,7 @@ function Demo() {
       >
         Print value
       </Button>
-    </>
+    </MantineProvider>
   );
 }
 
